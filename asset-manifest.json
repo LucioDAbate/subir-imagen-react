@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/subir-imagen-react/static/css/main.f855e6bc.css",
+    "main.js": "/subir-imagen-react/static/js/main.c6e60a7d.js",
+    "static/js/453.2a72e7fb.chunk.js": "/subir-imagen-react/static/js/453.2a72e7fb.chunk.js",
+    "index.html": "/subir-imagen-react/index.html",
+    "main.f855e6bc.css.map": "/subir-imagen-react/static/css/main.f855e6bc.css.map",
+    "main.c6e60a7d.js.map": "/subir-imagen-react/static/js/main.c6e60a7d.js.map",
+    "453.2a72e7fb.chunk.js.map": "/subir-imagen-react/static/js/453.2a72e7fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.c6e60a7d.js"
+  ]
+}
