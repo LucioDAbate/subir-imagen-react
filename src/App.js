@@ -25,7 +25,7 @@ function App() {
       <PiePagina/>
       </>
       )}
-      {pagina === 'contactos' && <Contactos />}
+      {pagina === 'contactos' && <Contactos/>}
       </header>
     </div>
   );
