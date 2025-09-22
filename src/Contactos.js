@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import "./App.css";
 import emailjs from '@emailjs/browser';
+import PiePagina from './PiePagina';
 
 function Contactos() {
   const form = useRef();
@@ -49,6 +50,7 @@ function Contactos() {
   };
 
   return (
+    <div>
     <form ref={form} onSubmit={sendEmail}>
       <label>Nombre</label>
       <input type="text" name="user_name" required minLength={3} />
@@ -61,6 +63,9 @@ function Contactos() {
 
       <input type="submit" value="Enviar" />
     </form>
+    <PiePagina/>
+    </div>
+
   );
 }
 
