@@ -1,22 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import ImagenDisplay from './ImagenDisplay';
+import PiePagina from './PiePagina';
+import Contactos from './Contactos';
 
 function App() {
+  const [pagina, setPagina] = useState('home');
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <nav style={{ marginBottom: '20px' }}>
+          <button onClick={() => setPagina('home')} style={{ margin: '0 10px' }}>
+            Inicio
+          </button>
+          <button onClick={() => setPagina('contactos')} style={{ margin: '0 10px' }}>
+            Contactos
+          </button>
+        </nav>
+
+
+      {pagina === 'home' && (
+      <>
+      <ImagenDisplay/>
+      <PiePagina/>
+      </>
+      )}
+      {pagina === 'contactos' && <Contactos />}
       </header>
     </div>
   );
