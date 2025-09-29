@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
-import "./App.css";
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import PiePagina from './PiePagina';
+import Ubicacion from './Ubicacion';
 
 function Contactos() {
   const form = useRef();
@@ -63,7 +62,7 @@ function Contactos() {
 
       <input type="submit" value="Enviar" />
     </form>
-    <PiePagina/>
+    <Ubicacion/>
     </div>
 
   );

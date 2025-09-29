@@ -1,33 +1,32 @@
-import './App.css';
-import React, { useState } from 'react';
+
+import {BrowserRouter, Routes, Route, Link} from "react-router";
 import ImagenDisplay from './ImagenDisplay';
 import PiePagina from './PiePagina';
+import Servicios from './Servicios';
 import Contactos from './Contactos';
+import { Toolbar } from '@mui/material';
+import NavTabs from './NavTabs';
 
 function App() {
-  const [pagina, setPagina] = useState('home');
   return (
-    <div className="App">
-      <header className="App-header">
-      <nav style={{ marginBottom: '20px' }}>
-          <button onClick={() => setPagina('home')} style={{ margin: '0 10px' }}>
-            Inicio
-          </button>
-          <button onClick={() => setPagina('contactos')} style={{ margin: '0 10px' }}>
-            Contactos
-          </button>
-        </nav>
+        <>
+      <BrowserRouter>
+      
+      <Toolbar/>
+      <NavTabs>
+        <Link to="/">Home</Link> | {" "}
+        <Link to="/servicios">Servicios</Link> | {" "}
+        <Link to="/contactos">Contactos</Link> | {" "}
+      </NavTabs>
 
-
-      {pagina === 'home' && (
-      <>
-      <ImagenDisplay/>
-      <PiePagina/>
-      </>
-      )}
-      {pagina === 'contactos' && <Contactos/>}
-      </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<ImagenDisplay />} />
+        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/contactos" element={<Contactos />} />
+      </Routes>
+    </BrowserRouter>
+    <PiePagina/>
+    </>
   );
 }
 
