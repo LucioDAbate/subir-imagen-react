@@ -15,6 +15,7 @@ function NavTabs() {
         <Tab label="HOME" value="/" component={Link} to="/" />
         <Tab label="Servicios" value="/servicios" component={Link} to="/servicios" />
         <Tab label="Contactos" value="/contactos" component={Link} to="/contactos" />
+        <Tab label="API" value="/api" component={Link} to="/api" />
       </Tabs>
     </Box>
   );
